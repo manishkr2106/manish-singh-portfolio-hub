@@ -1,4 +1,3 @@
-
 import { useState, useEffect } from 'react';
 import { Menu, X } from 'lucide-react';
 import { Button } from '@/components/ui/button';
@@ -32,10 +31,9 @@ const Navbar = () => {
     <header className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${scrolled ? 'bg-white shadow-sm py-3' : 'bg-transparent py-5'}`}>
       <div className="container mx-auto px-4 flex justify-between items-center">
         <a href="#" className="text-xl font-poppins font-bold text-primary">
-          Manish <span className="text-foreground">Singh</span>
+          Manish <span className="text-foreground">Kumar</span>
         </a>
 
-        {/* Desktop Menu */}
         <nav className="hidden md:flex items-center space-x-6">
           <button onClick={() => scrollToSection('about')} className="text-foreground hover:text-primary transition-colors">
             About
@@ -60,7 +58,6 @@ const Navbar = () => {
           </Button>
         </nav>
 
-        {/* Mobile Menu Button */}
         <button
           className="md:hidden text-foreground"
           onClick={() => setIsMenuOpen(!isMenuOpen)}
@@ -69,7 +66,6 @@ const Navbar = () => {
         </button>
       </div>
 
-      {/* Mobile Menu */}
       {isMenuOpen && (
         <div className="md:hidden bg-white shadow-lg absolute w-full animate-fade-in">
           <nav className="container mx-auto px-4 py-4 flex flex-col space-y-4">
